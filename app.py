@@ -17,5 +17,8 @@ ttk.Label(frm, text="臭膣屄").grid(column=0, row=3)
 ttk.Button(frm, text="懾屎跤", command=root.destroy).grid(column=0, row=5)
 ttk.Label(frm, text="Test", style="BW.TLabel", width="100").grid(column=0, row=8)
 ttk.Combobox(frm, justify="center", values=['test 1', 'test 2', 'test 3', '4', '5', '6', '7', '8', '9', '0'], state="readonly").grid(column=0, row=9)
+
+p = ttk.Progressbar()
+p.step()
 ttk.Progressbar(frm, orient="horizontal", length="500", value=testVar, mode="determinate", variable=testVar).grid(column=0, row=10)
 root.mainloop()
