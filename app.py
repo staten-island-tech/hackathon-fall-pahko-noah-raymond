@@ -16,16 +16,22 @@ ttk.Label(frm, text="Test", style="BW.TLabel", width="100").grid(column=0, row=8
 ttk.Combobox(frm, justify="center", values=['test 1', 'test 2', 'test 3', '4', '5', '6', '7', '8', '9', '0'], state="readonly").grid(column=0, row=9)
 ttk.Progressbar(frm, orient="horizontal", mode="determinate", length="1000", variable=progressVar, maximum=MAX).grid(column=0, row=15)
 progressbar = ttk.Progressbar(root, variable=progressVar, maximum=MAX)
-entry= Entry(frm).grid(column=1,row=78)
-entry.focus_set()
-entry.pack()
-ttk.Button(frm, text= "Okay", command= display_text).grid(column=1,row=1909909990)
+input_text = StringVar() 
+  
+entry1 = ttk.Entry(root, textvariable = input_text, justify = CENTER) 
+entry1.focus_force() 
+""" 
+entry1.pack(side = TOP, ipadx = 30, ipady = 6)  """
+  
+save = ttk.Button(root, text = 'Save', command = lambda : askyesno( 
+                                'Confirm', 'Do you want to save?')) 
+###save.pack(side = TOP, pady = 10)###
 def loop_function():
     k = 0
     while k <= MAX:
     ### some work to be done
         progressVar.set(k)
-        k += 0.2
+        k += 0.06
         time.sleep(0.01)
         root.update_idletasks()
     root.after(100, loop_function)
