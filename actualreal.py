@@ -21,4 +21,5 @@ save.pack(side = TOP, pady = 10)
 ttk.Progressbar(root, orient="horizontal", mode="determinate", length="1000", variable=progressVar, maximum=MAX)
 progressbar = ttk.Progressbar(root, variable=progressVar, maximum=MAX)
 progressbar.pack(side = TOP, pady = 50)
+
 root.mainloop() 

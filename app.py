@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import PhotoImage
 from tkinter import ttk
 import time
 
