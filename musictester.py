@@ -142,7 +142,7 @@ add_songs_menu.add_command(label='Select Folder', command=load_music)
 menu_bar.add_cascade(label='Add Songs', menu=add_songs_menu)
 
 # Create a listbox to display songs
-song_listbox = Listbox(app, bg="green", fg="white", width=100, height=13)
+song_listbox = Listbox(app, bg="purple", fg="white", width=100, height=13)
 song_listbox.pack()
 
 # Bind a selection event to the listbox
