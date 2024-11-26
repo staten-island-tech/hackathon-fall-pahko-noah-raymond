@@ -41,7 +41,7 @@ playlist = []  # List to store names of songs
 current_song = ""  # Store the currently playing song
 is_paused = False  # Flag to indicate if music is paused
 
-# Function to load music from a directory
+# Function to load music from a directory/folder
 def load_music():
     global current_song
     app.directory = filedialog.askdirectory()
@@ -56,7 +56,7 @@ def load_music():
         if ext == '.mp3':
             playlist.append(file)
 
-    # Add songs to the listbox
+    # Add songs to the list
     for song in playlist:
         song_listbox.insert("end", song)
 
@@ -65,19 +65,19 @@ def load_music():
         song_listbox.selection_set(0)
         current_song = playlist[song_listbox.curselection()[0]]
 
-# Function to play music
+# Function to actually play the music
 def play_music(event=None):
     global current_song, is_paused
 
     if not playlist:
         return
 
-    # Get the selected song from the listbox
+    # Get the selected song from the listbox thingy
     current_selection = song_listbox.curselection()
     if current_selection:
         current_song = playlist[current_selection[0]]
 
-    # If not paused, load and play the current song
+    # If nothing in is_paused, load and play the current song
     if not is_paused:
         pygame.mixer.music.load(os.path.join(app.directory, current_song))
         pygame.mixer.music.play()
