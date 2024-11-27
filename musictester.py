@@ -18,7 +18,7 @@ download_image('https://media.geeksforgeeks.org/wp-content/uploads/2024061015192
 
 # Initialize the Tkinter window
 app = Tk()
-app.title('Music Player with Tkinter and Pygame in Python')
+app.title('Shitty Spotify Ripoff')
 app.geometry("500x300")
 
 # Change the application icon
