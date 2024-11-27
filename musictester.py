@@ -18,7 +18,7 @@ download_image('https://media.geeksforgeeks.org/wp-content/uploads/2024061015192
 
 # Initialize the Tkinter window
 app = Tk()
-app.title('Shitty Spotify Ripoff')
+app.title('Crappy Spotify Ripoff')
 app.geometry("500x300")
 
 # Change the application icon
